@@ -1,0 +1,9 @@
+
+/* DayGrid view (month view) */
+.fc-daygrid-event {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 2px;
+  }
+  

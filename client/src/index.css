@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 65 80% 97%;
+    --foreground: 75 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 75 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 75 50% 10%;
+
+    --primary: 65 80% 40%;
+    --primary-foreground: 75 40% 98%;
+
+    --secondary: 75 70% 94%;
+    --secondary-foreground: 75 50% 20%;
+
+    --muted: 75 20% 94%;
+    --muted-foreground: 75 40% 40%;
+
+    --accent: 75 70% 94%;
+    --accent-foreground: 75 50% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 75 20% 88%;
+    --input: 75 20% 88%;
+    --ring: 65 80% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 65 70% 15%;
+    --sidebar-foreground: 65 20% 94%;
+    --sidebar-primary: 65 80% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 65 50% 20%;
+    --sidebar-accent-foreground: 65 20% 94%;
+    --sidebar-border: 65 50% 25%;
+    --sidebar-ring: 65 60% 50%;
+  }
+
+  .dark {
+    --background: 75 50% 10%;
+    --foreground: 75 20% 94%;
+
+    --card: 75 50% 15%;
+    --card-foreground: 75 20% 94%;
+
+    --popover: 75 50% 15%;
+    --popover-foreground: 75 20% 94%;
+
+    --primary: 65 80% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 75 50% 20%;
+    --secondary-foreground: 75 20% 94%;
+
+    --muted: 75 50% 20%;
+    --muted-foreground: 75 40% 70%;
+
+    --accent: 75 50% 20%;
+    --accent-foreground: 75 20% 94%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 75 50% 25%;
+    --input: 75 50% 25%;
+    --ring: 65 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:bg-secondary/50;
+  }
+  
+  .hotel-stat-card {
+    @apply rounded-lg border bg-card p-4 shadow-sm flex flex-col space-y-1 card-hover;
+  }
+  
+  .room-card {
+    @apply rounded-lg border bg-card p-4 shadow-sm flex justify-between items-center card-hover;
+  }
+}
